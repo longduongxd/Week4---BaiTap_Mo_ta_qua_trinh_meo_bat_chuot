@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    document.write( "<h4>Tinh Diem Trung Binh</h4>" + "<br/>");
+    let Mpoint = Number(prompt ( "enter Math Point"));
+    let Ppoint = Number(prompt ( "enter Physical Point"));
+    let Cpoint = Number(prompt ( "enter Chemistry Point"));
+    let TotalPoint = (Mpoint + Ppoint+ Cpoint);
+    let AveragePoint = (Mpoint + Ppoint+ Cpoint)/ 3;
+   document.write( "Average point :" + AveragePoint + "<br/>");
+   document.write( "Total point :" + TotalPoint + "<br/>");
+    document.write( "<h4>Chuyen doi nhiet do</h4>" + "<br/>");
+    let temperatureC = Number(prompt( "Enter temperature in Celsius: "));
+    let temperatureF = (temperatureC*9)/5+32;
+    document.write( "Temperature in Fahrenheit is:" + temperatureF);
+    document.write( "<h4>Diem tich hinh tron</h4>" + "<br/>");
+    let Rc = Number(prompt( "Enter radius of a circle: "));
+    let AcreageC = Rc*Rc*3.14;
+    document.write( "The Acreage of circle is:" + AcreageC);
+    document.write( "<h4>Chu vi hinh tron</h4>" + "<br/>");
+    let Pc = Number(prompt( "Enter radius of a circle: "));
+    let PerimeterC = Pc*2*3.14;
+    document.write( "The Perimeter of circle is:" + PerimeterC);
+</script>
+</body>
+</html>
