@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body onload="docReady()">
+<img ID = "ignister" src="https://i.imgur.com/Hwm60ZG.png" style="position:absolute;left:0; top:0;" height="100" width="80">
+<script>
+    function dichuyenright() {
+        let thongtin = document.getElementById("ignister");
+        thongtin.style.left = parseInt(thongtin.style.left) + 60 + "px";
+    }
+    function dichuyenleft() {
+        let thongtin = document.getElementById("ignister");
+        thongtin.style.left = parseInt(thongtin.style.left) - 60 + "px";
+    }
+    function dichuyentop() {
+        let thongtin = document.getElementById("ignister");
+        thongtin.style.top = parseInt(thongtin.style.top) + 60 + "px";    }
+
+    function dichuyendown() {
+        let thongtin = document.getElementById("ignister");
+        thongtin.style.top = parseInt(thongtin.style.top) - 60 + "px";
+
+    }
+    function moveSelection(evt) {
+        switch (evt.keyCode) {
+            case 37:
+                dichuyenleft();
+                break;
+            case 39:
+                dichuyenright();
+                break;
+            case 38:
+                dichuyentop();
+                break;
+            case 40:
+                dichuyendown();
+                break;
+        }
+    }
+    function docReady() {
+        window.addEventListener('keydown', moveSelection);
+    }
+</script>
+</body>
+</html>
