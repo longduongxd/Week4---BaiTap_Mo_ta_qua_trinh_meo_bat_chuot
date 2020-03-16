@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let name=prompt("Nhap ten tu ban phim:");
+    let password= prompt("Nhap mat khau nguoi dung:");
+    if(name==="admin" || "Admin") {
+        if(password==="TheMaster" ) {
+            document.write("Welcome")
+        } else{
+            if(password==="") {
+                document.write("Canceled")
+            } else {
+                document.write("Wrong password")
+            }
+        }
+    } else{
+        if(name==="") {
+            document.write("Canceled")
+        } else {
+            document.write("I don’t know you")
+        }
+    }
+</script>
+</body>
+</html>
