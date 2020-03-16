@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<p id="change"></p>
+<input type="button"  value="Change" onclick="playchess()"> </input>
+<script>
+    //KHAI BÁO MẢNG 2 CHIỀU
+    let a = new Array();
+    let b="";
+    for (i=0; i<5; i++){
+        a[i] = new Array (0,0,0,0,0);
+    };
+    //BIẾN MẢNG 2 CHIỀU THÀNH BÀN CỜ
+    for (i=0; i<a.length; i++) {
+        b +="<br>";
+        for (j=0; j<a.length; j++) {
+            b += a[i][j]+"&nbsp&nbsp";
+        }
+    }
+    document.getElementById("change").innerHTML=b;
+    // THAY ĐỔI 0 THÀNH X
+    function playchess () {
+        let x = prompt("Nhạp vào vị trí hàng:");
+        let y = prompt("Nhạp vào vị trí cột:");
+        b=""
+        a[x][y]= "x";
+        for (i = 0; i < a.length; i++) {
+            b += "<br/>"
+            for (j = 0; j < a.length; j++) {
+                b += a[i][j] + "&nbsp&nbsp";
+            }
+        }document.getElementById("change").innerHTML=b;
+    }
+</script>
+</body>
+</html>
