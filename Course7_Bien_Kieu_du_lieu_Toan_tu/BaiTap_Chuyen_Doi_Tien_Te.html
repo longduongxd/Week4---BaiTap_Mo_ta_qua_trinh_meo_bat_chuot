@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        table {
+            height: 40px;
+            width: 500px;
+            border-collapse: collapse;
+        }
+        th { align-content: center}
+    </style>
+</head>
+<body>
+<form action="">
+    <table border="0">
+        <th>Amount</th>
+        <th>From Currency</th>
+        <th>To Currency</th>
+        <tr align="center">
+            <td>
+                <input name="Amount1" ID="amount" type="text">
+            </td>
+            <td>
+                <select name="FCurrency" id="fromCurrency">
+                    <option value="VND"> VND</option>
+                    <option value="JPY">JPY</option>
+                    <option value="USD">USD</option>
+                    <option value="AUD">AUD</option>
+                </select>
+            </td>
+            <td>
+                <select name="TCurrency" id="toCurrency">
+                    <option value="VND">VND</option>
+                    <option value="JPY">JPY</option>
+                    <option value="USD">USD</option>
+                    <option value="AUD">AUD</option>
+                </select>
+            </td>
+            <td>
+                <button type="button" onclick="exchange()"  > Convert</button>
+            </td>
+    </table>
+<p> Result: <p id= "ketqua"> </p></p>
+</form>
+<script>
+function exchange() {
+    let VN = 1;
+    let JP = 200;
+    let US = 23200;
+    let AU = 16000;
+    let fromCurrency = document.getElementById("fromCurrency").value;
+    let toCurrency = document.getElementById("toCurrency").value;
+    if (fromCurrency === "VND") {
+        if (toCurrency === "VND") {
+            ketqua = document.getElementById("amount").value * VN / VN
+        } else {
+            if (toCurrency === "JPY") {
+                ketqua = document.getElementById("amount").value * VN / JP
+            } else {
+                if (toCurrency === "USD") {
+                    ketqua = document.getElementById("amount").value * VN / US
+                } else {
+                    if (toCurrency === "AUD") {
+                        ketqua = document.getElementById("amount").value * VN / AU
+                    }
+                }
+            }
+        }
+    }
+    if (fromCurrency === "JPY") {
+        if (toCurrency === "VND") {
+            ketqua = document.getElementById("amount").value * JP / VN
+        } else {
+            if (toCurrency === "JPY") {
+                ketqua = document.getElementById("amount").value * JP / JP
+            } else {
+                if (toCurrency === "USD") {
+                    ketqua = document.getElementById("amount").value * JP / US
+                } else {
+                    if (toCurrency === "AUD") {
+                        ketqua = document.getElementById("amount").value * JP / AU
+                    }
+                }
+            }
+        }
+    }
+    if (fromCurrency === "USD") {
+        if (toCurrency === "VND") {
+            ketqua = document.getElementById("amount").value * US / VN
+        } else {
+            if (toCurrency === "JPY") {
+                ketqua = document.getElementById("amount").value * US / JP
+            } else {
+                if (toCurrency === "USD") {
+                    ketqua = document.getElementById("amount").value * US / US
+                } else {
+                    if (toCurrency === "AUD") {
+                        ketqua = document.getElementById("amount").value * US / AU
+                    }
+                }
+            }
+        }
+    }
+    if (fromCurrency === "AUD") {
+        if (toCurrency === "VND") {
+            ketqua = document.getElementById("amount").value * AU / VN
+        } else {
+            if (toCurrency === "JPY") {
+                ketqua = document.getElementById("amount").value * AU / JP
+            } else {
+                if (toCurrency === "USD") {
+                    ketqua = document.getElementById("amount").value * AU / US
+                } else {
+                    if (toCurrency === "AUD") {
+                        ketqua = document.getElementById("amount").value * AU / AU
+                    }
+                }
+            }
+        }
+    }
+    document.getElementById("ketqua").innerHTML = ketqua ;
+}
+</script>
+</body>
+</html>
