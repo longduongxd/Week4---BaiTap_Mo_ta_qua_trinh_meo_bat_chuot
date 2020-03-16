@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<form action="">
+    <input type="text" id = "songay" >
+    <button type = "button" onclick="trathang()" > Tinh So Ngay </button>
+    <p id="tracuu"> ..... </p>
+</form>
+<script>
+    function trathang() {
+        let nhapthang = document.getElementById("songay").value;
+        switch (nhapthang) {
+            case "1" : bienso = "Thang 1 co 31 ngay";
+                break;
+            case "2" : bienso = "Thang 2 co 28 ngay" ;
+                break;
+            case "3" : bienso = "Thang 3 co 30 ngay";
+                break;
+            case "4" : bienso = "Thang 4 co 30 ngay";
+                break;
+            case "5" : bienso = "Thang 5 co 31 ngay";
+                break;
+            case "6" : bienso = "Thang 6 co 30 ngay";
+                break;
+            case "7" : bienso = "Thang 7 co 30 ngay";
+                break;
+            case "8" : bienso = "Thang 8 co 31 ngay";
+                break;
+            case "9" : bienso = "Thang 9 co 30 ngay";
+                break;
+            case "10" : bienso = "Thang 10 co 31 ngay";
+                break;
+            case "11" : bienso = "Thang 11 co 30 ngay";
+                break;
+            case "12" : bienso = "Thang 12 co 31 ngay";
+                break;
+                default : bienso = "Not avaiable!";
+        }    document.getElementById("tracuu").innerHTML = bienso;
+    }
+    //console.log(bienso);
+
+</script>
+</body>
+</html>
