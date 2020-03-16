@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<form action="">
+    <img ID = "ignister" src="https://i.imgur.com/Hwm60ZG.png" alt="">
+    <p>..........</p>
+    <input type="button" onclick="dichuyen()" value="Click me">
+</form>
+<script>
+    let thongtin = null;
+    thongtin = document.getElementById("ignister"); //Tại sao phải thêm dòng này?
+    function sukien() {
+        thongtin = document.getElementById("ignister");
+        thongtin.style.position = "relative";
+        thongtin.style.left = "0px";
+
+    }
+    function dichuyen() {
+        thongtin.style.left = parseInt(thongtin.style.left) + 100 + "px";
+
+    }
+    window.onload = sukien;
+</script>
+</body>
+</html>
