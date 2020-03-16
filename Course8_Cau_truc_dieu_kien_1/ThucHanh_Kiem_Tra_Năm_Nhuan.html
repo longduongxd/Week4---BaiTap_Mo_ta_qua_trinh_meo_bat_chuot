@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+let year = parseInt(prompt( "Emter Year:"));
+let kiemtra = year%4;
+let kiemtra2 = year%100;
+let kiemtra3 = year%400;
+if ( kiemtra3 ==0 ) {
+    if( kiemtra2==0) {
+        if(kiemtra ==0) {
+            document.write(year +"<br/>"+ "là nam nhuan")
+        } else { document.write(year + "<br/>"+ "Khong là nam nhuan")}
+    } else {
+        if (kiemtra ==0) {
+            document.write(year + "<br/>"+  "là nam nhuan")
+        } else {document.write(year + "<br/>"+  "Khong là nam nhuan")}
+    }
+} else{
+    if ( kiemtra2 ==0) {
+        document.write(year + "<br/>"+  "Khong là nam nhuan")
+    } else if( kiemtra==0) {
+        document.write(year +  "<br/>"+ "là nam nhuan")
+    } else {document.write(year + "<br/>"+  "Khong là nam nhuan")}
+}
+</script>
+</body>
+</html>
