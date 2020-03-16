@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<input type="text" id="nhapThongTin"> </input>
+<input type="button" id="themPhanTu" value="Add" onclick="addElement()"></input>
+<input type="button" id="hienThiDay" value="Show Array" onclick="showArray()"> </input>
+<p id="elementHero"></p>
+<script>
+    let day = Array();
+    let m=0;
+    function addElement() {
+        day[m] = document.getElementById("nhapThongTin").value;
+        alert("Element " + day[m] + " was add at location " +m );
+        m++;
+        document.getElementById("nhapThongTin").value=" ";
+    }
+    function showArray() {
+        let a="<hr/>";
+        for(i=0; i< day.length; i++) {
+            a+= "Element " + i + " = " + day[i];
+        }
+        document.getElementById("elementHero").innerHTML = a;
+
+    }
+</script>
+</body>
+</html>
