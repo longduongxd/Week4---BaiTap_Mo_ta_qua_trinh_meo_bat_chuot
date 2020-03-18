@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <h2><b>Tính tổng đường chéo ma trận vuông </b></h2>
+    <p>Nhập kích thước ma trận kích thước <b>a</b>x<b>a</b>: </p>
+    <input id = "kichThuoc" type="Number">
+    <button onclick="maTran()">Caculator</button>
+    <br>
+    <b><p>Tông đường chéo ma trận là:</p></b>
+    <b><p id = "ketQua" type="text"></p></b>
+    <p id="matrix2"></p>
+    <br>
+</head>
+<body>
+<script>
+    function maTran() {
+let a = parseInt(Number(document.getElementById("kichThuoc").value));
+let tong=0;
+let matrixIn="";
+let maTrix = new Array(3);
+for (i=0; i<a; i++){
+    maTrix[i] = new Array(3);
+    for (j=0; j<a; j++) {
+        maTrix[i][j]= Number(prompt("Nhap so:"));
+    }
+}
+console.log(maTrix + "<br/>");
+    for (i = 0; i < a; i++) {
+        matrixIn += "<br/>";
+        for (j = 0; j < a; j++) {
+            matrixIn += maTrix[i][j] + '&nbsp&nbsp';
+            if (i === j) {
+                tong += maTrix[i][j];
+            }
+        }
+    }
+    document.getElementById("ketQua").innerHTML=tong;
+    console.log(tong);
+    document.getElementById("matrix2").innerHTML=matrixIn;
+}
+
+</script>
+</body>
+</html>

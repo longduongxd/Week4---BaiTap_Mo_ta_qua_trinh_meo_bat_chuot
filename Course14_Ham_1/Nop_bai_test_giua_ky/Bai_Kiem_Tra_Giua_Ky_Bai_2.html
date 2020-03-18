@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <b><p>Thêm phần tử vào ô bên dưới:</p></b>
+    <input type="text" id = "addElement" oninput="addElement()" onchange="addElement()">
+    <button onclick="tong1()">Sum </button>
+    <br>
+    <b><p>Danh sách các phần tử:</p></b>
+    <p id="show" ></p>
+    <br>
+    <b><p>Tổng các phần tử là số lẻ:</p></b>
+    <p id = "tong"></p>
+</head>
+<body>
+<script>
+    let a = new Array();
+    let i=0;
+    let tong = 0;
+    function addElement () {
+        let dauVao = Number(document.getElementById("addElement").value);
+        a[i] = dauVao;
+        i++;
+        document.getElementById("show").innerHTML = a;
+        document.getElementById("addElement").value = "";
+        console.log(a);
+    }
+    function tong1() {
+        for (j = 0; j < a.length; j++) {
+            if (a[j] % 2 !== 0) {
+                tong += a[j]
+            }
+            console.log(tong);
+        }
+        document.getElementById("tong").innerHTML = tong;
+
+    }
+</script>
+</body>
+</html>

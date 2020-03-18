@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <h4>Nhập năm sinh:</h4>
+    <input id ="dauVao" type="text" >
+    <button onclick="tinhTuoi()">Tính Tuổi</button>
+    <br>
+    <p id="thongBao"></p>
+    <p id="thongBaoTuoi"></p>
+</head>
+<body>
+<script>
+    function tinhTuoi () {
+        let namSinh=Number(document.getElementById("dauVao").value);
+        if(namSinh<2020 && namSinh >1900) {
+            tuoi = 2020 - namSinh;
+            document.getElementById("thongBaoTuoi").innerHTML = tuoi;
+        }
+        else {
+            document.getElementById("thongBao").innerHTML="Năm sinh không hợp lệ";
+        }
+    }
+</script>
+</body>
+</html>

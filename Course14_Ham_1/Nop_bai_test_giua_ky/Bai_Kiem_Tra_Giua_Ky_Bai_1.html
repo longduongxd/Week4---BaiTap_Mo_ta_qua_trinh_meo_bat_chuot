@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<b><p>Hiển thị các số nguyên tố nhỏ hơn số sau:</p></b>
+<input id="dauVao" type="text">
+<button onclick="hienThiSoNguyenTo()" oninput="hienThiSoNguyenTo(this.value)" onchange="hienThiSoNguyenTo(this.value)">Show</button>
+<p id="hienThi"></p>
+<body>
+<script>
+    function hienThiSoNguyenTo () {
+        let a = 2;
+        let soVao = document.getElementById("dauVao").value;
+        let counter = 0;
+        let i=0;
+        let mang = new Array();
+        while (a < soVao) {
+            let b = 2;
+            do {
+                if (a % b === 0) {
+                    counter++;
+                }
+                b++;
+            } while (b <= a);
+            if (counter === 1) {
+                mang[i]=a;
+                i++;
+            }
+            counter = 0;
+            a += 1;
+        }
+    document.getElementById("hienThi").innerHTML = mang;
+    }
+</script>
+</body>
+</html>
