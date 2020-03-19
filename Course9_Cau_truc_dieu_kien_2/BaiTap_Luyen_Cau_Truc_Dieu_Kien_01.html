@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    //Bai 1:
+    //let a = Number(prompt("Nhap so thu nhat:"));
+    //let b = Number(prompt("Nhap so thu hai:"));
+    //if (a%b ===0) { document.write("a chia het cho b")} else {document.write("a khong chia het cho b")};
+    //Bai 2:
+    //let a = Number(prompt("Nhap tuoi hoc sinh:"));
+    //if (a>=16) { document.write("Du tuoi vao lop 10")} else {document.write("Khong du tuoi vao lop 10")};
+    //Bai 3:
+    //let a = parseInt(prompt("Nhap so:"));
+    //if (a>=0) { document.write("So nhap vao lon hon 0")} else {document.write("So nhap vao nho hon 0")};
+    // Bai 4:
+    //let a = Number(prompt("Nhap so thu nhat:"));
+    //let b = Number(prompt("Nhap so thu hai:"));
+    //let c = Number(prompt("Nhap so thu ba:"));
+    //if (a>b) {
+        //if (a>c) { document.write("A MAX")} else { document.write("C MAX")}
+    //} else{
+        //if (b>c) {
+            //document.write("B MAX")
+        //} else {
+            //document.write("C MAX")
+        //}
+    //}
+        // Bai 5:
+    //let a = Number(prompt("Nhap diem thu nhat:"));
+    //let b = Number(prompt("Nhap diem thu hai:"));
+    //let c = Number(prompt("Nhap diem thu ba:"));
+    //let trungbinh = (a+b+c)/3;
+   // if (trungbinh>=8) { document.write("Hoc luc Gioi")} else{
+        //if (trungbinh>=7) {
+            //document.write("Hoc luc Kha")
+        //} else {
+            //document.write("hoc luc Trung binh")
+        //}
+    //}
+    <!–-Bai 1:-–>
+    <script>
+    let a= prompt("Nhap tham so a:");
+    let b= prompt("Nhap tham so b:");
+    if(a%b===0) { document.write("a chia het cho b")} {document.write("a khong chia het cho b")};
+</script>
+<!–-Bai 2:-–>
+<p id="anso"> </p>
+<script>
+    let a= prompt("Nhap tuoi hoc sinh:");
+    if(a <=15) { document.write("Khong du tuoi vao lop 10")};
+</script>
+<!–-Bai 3:-–>
+<p id="anso"> </p>
+<script>
+    let a= parseInt(prompt("Nhap vao so nguyen:"));
+    if(a < 0) {
+        let ketqua = "So nho hon 0";
+        document.getElementById(anso).innerHTML=ketqua } {
+        let ketqua = "So lon hon 0";
+        document.getElementById(anso).innerHTML=ketqua
+    };
+</script>
+<!–-Bai 4:-–>
+<script>
+    let a= Number(prompt("Nhap tham so a:"));
+    let b= Number(prompt("Nhap tham so b:"));
+    let c= Number(prompt("Nhap tham so c:"));
+    if(a >b) {
+        if (a>c) {
+            document.write("A MAX");
+        } else {document.write("C MAX")}
+    } else{
+        if (b>c){
+            document.write("B MAX");
+        } else {document.write("C MAX")}
+    }
+</script>
+<!–-Bai 5:-–>
+<script>
+    let a= prompt("Nhap die mkiem tra:");
+    let b= prompt("Nhap diem thi giua ky:");
+    let c= prompt("Nhap diem thi cuôi ky:");
+    let trungbinh = (a+b+c)/3;
+    if (trungbinh>=9){
+        document.write("Hoc luc gioi")
+    } else {
+        if (trungbinh>=7) {
+            document.write("Hoc luc kha")
+        } else {
+            if( trungbinh >= 5) {
+                document.write("Hoc luc trung binh")
+            } else { document.write("Hoc luc yeu")}
+        }
+    }
+</script>
+</body>
+</html>
