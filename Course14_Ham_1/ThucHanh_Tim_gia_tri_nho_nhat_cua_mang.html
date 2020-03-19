@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+
+   let Array1 = [3, 5, 1, 8, -3, 7, 8];
+   let Array2 =[7, 12, 6, 9, 20, 56, 89];
+   let Array3 =[];
+   let Array4 =[0, 0, 0, 0, 0, 0];
+    function timGiaTriMin(long) {
+        let min = 0;
+        for (i=1; i<long.length; i++) {
+            if (long[i] < min) {
+                min = long[i];
+            }
+        } document.write( "Gia tri min la :" + min+ "<br/>");
+    }
+    timGiaTriMin(Array1);
+    timGiaTriMin(Array2);
+    timGiaTriMin(Array3);
+</script>
+</body>
+</html>
