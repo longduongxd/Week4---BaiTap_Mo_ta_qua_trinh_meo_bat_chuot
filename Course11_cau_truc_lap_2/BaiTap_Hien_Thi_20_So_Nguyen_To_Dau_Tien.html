@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let a=2;
+    let count=0;
+    let counter=0;
+    while(count <20) {
+        let b = 2;
+        do {
+            if (a % b === 0) {
+                counter++;
+            }
+            b++;
+        } while ( b<=a);
+        if (counter===1) {count++; document.write(a+"<br/>")};
+        counter=0;
+        a+=1;
+    }
+</script>
+</body>
+</html>
