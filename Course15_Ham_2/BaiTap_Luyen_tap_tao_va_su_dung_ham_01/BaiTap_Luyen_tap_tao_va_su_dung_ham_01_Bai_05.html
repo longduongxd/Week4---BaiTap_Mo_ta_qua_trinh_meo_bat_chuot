@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let so1=prompt("Enter your a destiny star:");
+    let aStarName = new Array("polaris","aldebaran","deneb","vega","altair","dubhe","regulus");
+    let aConstellationName = new Array("Ursa","Minor","Tarurus","Cygnus","Lyra","Aquila","Ursa");
+    findAStar(so1);
+    function findAStar(name) {
+        let count=0;
+        for (i=0; i< aStarName.length; i++) {
+            if (name===aStarName[i]){
+                document.write(aConstellationName[i]);count++} }
+        if (count==0) { document.write("Empty!")};
+        }
+</script>
+</body>
+</html>

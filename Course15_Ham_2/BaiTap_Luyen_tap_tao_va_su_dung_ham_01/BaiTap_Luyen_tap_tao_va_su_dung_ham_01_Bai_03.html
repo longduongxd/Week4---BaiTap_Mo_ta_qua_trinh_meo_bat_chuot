@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<p> So thu nhat: <input type="number", oninput="tangHoacTinhTong(this.value)"  id="so1"> </input></p>
+<p> So thu hai <input type="number", oninput="tangHoacTinhTong(this.value)"  id="so2"> </input></p>
+<p> Ket qua: </p><p id="ketqua1" >  </p>
+<script>
+    function tangHoacTinhTong (so1, so2) {
+        so1 = document.getElementById("so1").value;
+        so2 = document.getElementById("so2").value;
+        if (so1 !=="" && so2 !== "" && so1>so2) {
+            alert(so1+ "lon hon" +so2);
+        } else {
+            if (so1 !=="" && so2 !== "" && so1<so2) {
+                c=Number(so1)+Number(so2);
+                document.getElementById("ketqua1").innerHTML=so1 + " nho hon so "+ so2+ " tong hai so la:" + c;
+            }
+        }
+    }
+</script>
+</body>
+</html>
