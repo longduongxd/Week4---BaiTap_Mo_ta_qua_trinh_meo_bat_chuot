@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<button onclick="trochoidoanso()"> Play </button>
+<script>
+    function trochoidoanso() {
+        let a = Number(prompt("Nhap vao so:"));
+        let c = parseInt(Math.floor(Math.random() * (a - 0 + 1)) + 0);
+        console.log(c);
+        b = Number(prompt("Nhap vao so ban doan:"));
+        let count = 1;
+        do {
+            if (c === b) {
+                document.write("Chuc mung");
+                count += 3
+            } else {
+                d = Number(prompt("Xin moi thu lai:"));
+                b = d;
+            }      count++;
+        } while (count <= 2) ;
+
+        }
+
+
+</script>
+</body>
+</html>
