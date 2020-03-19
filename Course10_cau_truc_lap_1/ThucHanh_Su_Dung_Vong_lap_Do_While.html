@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<p id="tong"></p>
+<script>
+let a =0;
+let tong = 0;
+do {
+    a = Number(prompt("Nhap vao mot so, nhap vao '-1' de ket thuc:"));
+    document.write(a + "<br/>");
+    tong +=a;
+} while (a != -1);
+    document.getElementById("tong").innerHTML = tong;
+</script>
+</body>
+</html>
