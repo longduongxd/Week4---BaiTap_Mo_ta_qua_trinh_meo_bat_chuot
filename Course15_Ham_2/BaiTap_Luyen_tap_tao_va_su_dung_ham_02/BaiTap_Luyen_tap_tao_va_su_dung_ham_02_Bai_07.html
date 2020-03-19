@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <p>Hai so a va b lan lươt la: <p id= "before"></p></p>
+    <p>Sau khi hoan doi hai so a va b lan lươt la: <p id ="after"></p></p>
+</head>
+<body>
+
+<script>
+    let a = Number(prompt("Enter a number:"));
+    let b = Number(prompt("Enter b number:"));
+    // document.write(a) ;
+    document.getElementById("before").innerHTML=  a + "  " + b;
+    reverseNumber();
+    function reverseNumber() {
+        let c=a;
+        a=b;
+        b=c;
+        document.getElementById("after").innerHTML= a + "  " + b;
+    }
+</script>
+</body>
+</html>

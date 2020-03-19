@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<p>Enter first number: <input type="text" id="num1"  oninput="checkMin(this.value)" ></p>
+<p>Enter second number: <input type="text" id="num2"  oninput="checkMin(this.value)" ></p>
+<p>Enter third number: <input type="text" id="num3"  oninput="checkMin(this.value)" ></p>
+<p>The Minest numbet is: <p id = "ketqua"></p></p>
+<body>
+<script>
+    function checkMin(a,b,c) {
+        a= Number(document.getElementById("num1").value);
+        b= Number(document.getElementById("num2").value);
+        c= Number(document.getElementById("num3").value);
+        if( a<b) {
+            if (a<c) {
+                ketqua =  a ;
+            } else { ketqua = c;
+            }
+        } else {
+            if( b<c) {
+                ketqua =b ;
+            } else {ketqua =c ;}
+        }
+        document.getElementById("ketqua").innerHTML= ketqua;
+    }
+</script>
+</body>
+</html>

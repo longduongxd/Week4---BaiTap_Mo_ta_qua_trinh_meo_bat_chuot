@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    reverse();
+    function reverse() {
+        let a = new Array();
+        for (i=0; i<5; i++) {
+            a[i] = Number(prompt("enter a item:" ));
+        }
+        document.write("a prime array" +a +"<br/>");
+        let b= new Array();
+        // let b= "";
+        for (i=0; i<a.length; i++) {
+            b[i]=a[a.length-1-i];
+        }
+        document.write("a array after be reversed:" + b);
+    }
+</script>
+</body>
+</html>
