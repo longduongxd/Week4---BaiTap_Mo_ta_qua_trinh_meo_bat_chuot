@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<p id="change"></p>
+<input type="button"  value="PlayFaker 1" onclick="playchess1()"> </input>
+<input type="button"  value="PlayFaker 2" onclick="playchess2()"> </input>
+<script>
+    //KHAI BÁO MẢNG 2 CHIỀU
+    let a = new Array();
+    let b="";
+    for (i=0; i<5; i++){
+        a[i] = new Array ("..","..","..","..","..");
+    };
+    //BIẾN MẢNG 2 CHIỀU THÀNH BÀN CỜ
+    for (i=0; i<a.length; i++) {
+        b +="<br>";
+        for (j=0; j<a.length; j++) {
+            b += a[i][j]+"&nbsp&nbsp";
+        }
+    }
+    document.getElementById("change").innerHTML=b;
+    // THAY ĐỔI 0 THÀNH X
+    function playchess1 () {
+        let x = prompt("Player 1 nhạp vào vị trí hàng:");
+        let y = prompt("player 1 nhap vào vị trí cột:");
+        b="";
+        a[x][y]= "x";
+        for (i = 0; i < a.length; i++) {
+            b += "<br/>";
+            for (j = 0; j < a.length; j++) {
+                b += a[i][j] + "&nbsp&nbsp";
+            }
+        }document.getElementById("change").innerHTML=b;
+        checkWinner();
+    }
+    function playchess2 () {
+        let x = prompt("Player 2 nhạp vào vị trí hàng:");
+        let y = prompt("player 2 nhap vào vị trí cột:");
+        b="";
+        a[x][y]= "o";
+        for (i = 0; i < a.length; i++) {
+            b += "<br/>";
+            for (j = 0; j < a.length; j++) {
+                b += a[i][j] + "&nbsp&nbsp";
+            }
+        }document.getElementById("change").innerHTML=b;
+        checkWinner();
+    }
+
+function checkWinner() {
+    for (i = 0; i < a.length; i++) {
+        for (j = 0; j < a.length; j++) {
+            if (a[i][j] === "x" && a[i + 1][j] === "x" && a[i + 2][j] === "x") {
+                alert("player 1 Win!")
+            }
+            if (a[i][j] === "x" && a[i][j + 1] === "x" && a[i][j + 2] === "x") {
+                alert("player 1 Win!")
+            }
+            if (a[i][j] === "x" && a[i + 1][j + 1] === "x" && a[i + 2][j + 2] === "x") {
+                alert("player 1 Win!")
+            }
+            if (a[i][j] === "x" && a[i - 1][j + 1] === "x" && a[i - 2][j + 2] === "x") {
+                alert("player 1 Win!")
+            }
+            if (a[i][j] === "o" && a[i + 1][j] === "o" && a[i + 2][j] === "o") {
+                alert("player 2 Win!")
+            }
+            if (a[i][j] === "o" && a[i][j + 1] === "o" && a[i][j + 2] === "o") {
+                alert("player 2 Win!")
+             }
+            if (a[i][j] === "o" && a[i + 1][j + 1] === "o" && a[i + 2][j + 2] === "o") {
+                alert("player 2 Win!")
+             }
+            if (a[i][j] === "o" && a[i - 1][j + 1] === "o" && a[i - 2][j + 2] === "o") {
+                alert("player 2 Win!")
+            }
+        }
+    }
+ }
+</script>
+</body>
+</html>
