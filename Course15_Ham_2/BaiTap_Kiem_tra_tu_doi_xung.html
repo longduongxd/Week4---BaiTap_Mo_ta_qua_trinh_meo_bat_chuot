@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    kiemTraDoiXung("otto") ;
+    kiemTraDoiXung("mirror");
+    kiemTraDoiXung("chuonchuon") ;
+    kiemTraDoiXung("rotor") ;
+    function kiemTraDoiXung(a) {
+        let chuoi= a;
+        let chuoiF1 = new Array();
+        let c=chuoi.length;
+        let c1=chuoi.length-2;
+        for (i=0; i<chuoi.length; i++) {
+            if (c1<c){
+                chuoiF1[i] = chuoi[i+1]};
+            if  (chuoi.length<=1){
+                return document.write(" Day la tu doi xung " +"<br/>")};
+            if (chuoi[i]===chuoi[chuoi.length-1]){return kiemTraDoiXung(chuoiF1);
+            } else  {
+                return document.write("Day khong phai la tu doi xung "+"<br/>");
+            }
+
+        }
+
+    }
+</script>
+</body>
+</html>
