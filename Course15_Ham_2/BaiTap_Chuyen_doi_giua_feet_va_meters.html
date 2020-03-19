@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<<body>
+    <input type="text" id="inputText" oninput="chuyenDoiDodai(this.value)"/>
+        <select name="" id="changeLength" onchange="thayDoiSoNhan(this.value)">
+        <option  value="3.279"> Meter </option>
+        <option value="0.305"> feet </option>
+        </select>
+        <p id = "ketqua"></p>
+        <script>
+        function thayDoiSoNhan(soNhan) {
+            doDai = document.getElementById("inputText").value;
+            chuyenDoDai = soNhan*doDai;
+            document.getElementById("ketqua").innerHTML=chuyenDoDai;
+        }
+    function chuyenDoiDodai(doDai) {
+        a = document.getElementById("changeLength").value;
+        chuyenDoDai = a*doDai;
+        document.getElementById("ketqua").innerHTML=chuyenDoDai;
+    }
+</script>
+</body>
+</html>
