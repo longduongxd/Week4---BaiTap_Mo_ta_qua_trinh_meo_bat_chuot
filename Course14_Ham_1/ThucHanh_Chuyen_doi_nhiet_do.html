@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h2> Temperature Converter</h2><br/>
+<h4> Type a value in the Fahrenheit field to convert the value to Celcius</h4> <br/>
+<p> Fahrenheit <input type="text", oninput="chuyenNhietDo(this.value)"> </input></p>
+<p> Celcius: </p><p id="hienThiNhietDoC" >  </p>
+<script>
+    function chuyenNhietDo(nhietDo) {
+        ketqua = (nhietDo-32)/1.8;
+        document.getElementById("hienThiNhietDoC").innerHTML=ketqua;
+    }
+
+</script>
+</body>
+</html>
