@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<!–-Bai 1:-–>
+<p id="nhietdo"> Nhiet do C quy tu do F la </p>
+<script>
+let a= prompt("Nhap nhiet do F:");
+let b = (a-32)/(9/5);
+document.getElementById("nhietdo").innerHTML=b;
+</script>
+<!–-Bai 2:-–>
+<p id="dodai"> Chieu dai quy doi sang ft la: </p>
+<script>
+let a= prompt("Nhap chieu dai m:");
+let b = a* 3.2808;
+document.getElementById("dodai").innerHTML=b;
+</script>
+<!–-Bai 3:-–>
+<p id="dientich"> Dien tich hinh vuong la: </p>
+<script>
+let a= prompt("Nhap chieu dai canh hinh vuong:");
+let s = a*a;
+document.getElementById("dientich").innerHTML=b;
+</script>
+<!–-Bai 3:-–>
+<p id="dientich"> Dien tich hinh chu nhat la: </p>
+<script>
+let a= prompt("Nhap chieu dai canh ngan hinh chu nhat:");
+let b= prompt("Nhap chieu dai canh dai hinh chu nhat:");
+let s = a*b;
+document.getElementById("dientich").innerHTML=b;
+</script>
+<!–-Bai 4:-–>
+<p id="dientich"> Dien tich hinh chu nhat la: </p>
+<script>
+let a= prompt("Nhap chieu dai canh ngan hinh chu nhat:");
+let b= prompt("Nhap chieu dai canh dai hinh chu nhat:");
+let s = a*b;
+document.getElementById("dientich").innerHTML=s;
+<!–-Bai 5:-–>
+<p id="dientich"> Dien tich hinh tam giac la: </p>
+<script>
+let a= prompt("Nhap chieu dai canh thu nhat:");
+let b= prompt("Nhap chieu dai canh canh thu hai:");
+let s = 0.5*a*b;
+document.getElementById("dientich").innerHTML=s;
+</script>
+<!–-Bai 6:-–>
+<p id="nghiempt"> Nghiem phuong trinh bac nhat: </p>
+<script>
+let a= prompt("Nhap tham so a:");
+let b= prompt("Nhap tham so b:");
+let nghiem = -b/a;
+document.getElementById("nghiempt").innerHTML=nghiem;
+</script>
+<!–-Bai 7:-–>
+<p id="anso"> nghiem phuong trinh bac hai </p>
+<script>
+    let a= prompt("Nhap tham so a:");
+    let b= prompt("Nhap tham so b:");
+    let c= prompt("Nhap tham so c:");
+    let delta = b*b-(4*a*c);
+    if (delta <0) {
+        let ketqua = "Phuong trinh vo nghiem" +a;
+        document.getElementById("anso").innerHTML=ketqua;
+    } else{
+        if(delta===0) {
+            let ketqua = "Phuong trinh co nghiem kep" + (-b)/(2*a);
+            document.getElementById("anso").innerHTML = ketqua;
+        }else{
+            let ketqua = "Phuong trinh co nghiem 1 " + (-b+ (Math.sqrt(delta))/(2*a)) +" Phuong trinh co nghiem 2 "+ (-b- (Math.sqrt(delta))/(2*a));
+            document.getElementById("anso").innerHTML = ketqua;
+        }
+    }
+</script>
+<!–-Bai 8:-–>
+<p id="tuoi"> Do tuoi can kiem tra: </p>
+<script>
+    let a= prompt("Nhap vao so tuoi:");
+    if(a<=120 && a>0) { document.write("Do la tuoi cua mot nguoi")} else{document.write("Do khong la tuoi cua mot nguoi")}
+</script>
+<!–-Bai 9:-–>
+<script>
+    let a= prompt("Nhap tham so a:");
+    let b= prompt("Nhap tham so b:");
+    let c= prompt("Nhap tham so c:");
+    let dieukien1 = a+b;
+    let dieukien2 = a+c;
+    let dieukien3 = b+c;
+    if (a>0) {
+        if (b>0){
+            if(c>0) {
+                if(dieukien1>c) {
+                    if(dieukien2>b) {
+                        if(dieukien3>a) { document.write("Ba canh nhap vao la tam giac")}
+                    } else {"Ba canh nhap vao khong la tam giac")}
+                }else {"Ba canh nhap vao khong la tam giac")}
+            }else {"Ba canh nhap vao khong la tam giac")}
+        }else {"Ba canh nhap vao khong la tam giac")}
+    }else {"Ba canh nhap vao khong la tam giac")}
+</script>
+<!–-Bai 10:-–>
+<table>
+    <tr>
+        <td>Tổng điện mức tiêu thụ:</td>
+        <td> <p id="tongdien"> 0: </p></td>
+        <td>Kwh</td>
+    </tr>
+    <tr>
+        <td>Tiền điện mức tiêu thụ 0-50Kw:</td>
+        <td> <p id="tiendien1"> 0: </p></td>
+        <td>VNĐ</td>
+    </tr>
+    <tr>
+        <td>Tiền điện mức tiêu thụ 51-100Kw:</td>
+        <td><p id="tiendien2"> 0: </p></td>
+        <td>VNĐ</td>
+    </tr>
+    <tr>
+        <td>Tiền điện mức tiêu thụ 101-200Kw:</td>
+        <td><p id="tiendien3"> 0: </p></td>
+        <td>VNĐ</td>
+    </tr>
+    <tr>
+        <td>Tiền điện mức tiêu thụ 201-300Kw:</td>
+        <td><p id="tiendien4"> 0: </p></td>
+        <td>VNĐ</td>
+    </tr>
+    <tr>
+        <td>Tiền điện mức tiêu thụ 301-400Kw:</td>
+        <td><p id="tiendien5"> 0: </p></td>
+        <td>VNĐ</td>
+    </tr>
+    <tr>
+        <td>Tiền điện mức tiêu thụ trên 401Kw:</td>
+        <td><p id="tiendien6"> 0: </p></td>
+        <td>VNĐ</td>
+    </tr>
+    <tr>
+        <td>Tổng tiền điện cần thanh toán:</td>
+        <td><p id="tongtien"> 0: </p></td>
+        <td>VNĐ</td>
+    </tr>
+</table>
+<script>
+    let a= Number(prompt("Nhap vao so dien dung trong thang:"));
+    let m1=a-50;
+    let m2=a-100;
+    let m3=a-200;
+    let m4=a-300;
+    let m5=a-400;
+    document.getElementById("tongdien").innerHTML=a;
+    if(m5>0) { let thang50= 50*1678; document.getElementById("tiendien1").innerHTML= thang50
+        let thang100= 50*1734; document.getElementById("tiendien2").innerHTML= thang100
+        let thang200= 100*2014; document.getElementById("tiendien3").innerHTML= thang200
+        let thang300= 100*2536; document.getElementById("tiendien4").innerHTML= thang300
+        let thang400= 100*2834; document.getElementById("tiendien5").innerHTML= thang400
+        let thangtren400= m5*2927; document.getElementById("tiendien6").innerHTML= thangtren400
+        let tong= thang50+thang100+thang200+thang300+thang400+thangtren400; document.getElementById("tongtien").innerHTML= tong
+    } else {
+        if (m4>0) {let thang50= 50*1678; document.getElementById("tiendien1").innerHTML= thang50
+            let thang100= 50*1734; document.getElementById("tiendien2").innerHTML= thang100
+            let thang200= 100*2014; document.getElementById("tiendien3").innerHTML= thang200
+            let thang300= 100*2536; document.getElementById("tiendien4").innerHTML= thang300
+            let thang400= m4*2834; document.getElementById("tiendien5").innerHTML= thang400
+            let tong= thang50+thang100+thang200+thang300+thang400; document.getElementById("tongtien").innerHTML= tong
+        } else {
+            if(m3>0) {let thang50= 50*1678; document.getElementById("tiendien1").innerHTML= thang50
+                let thang100= 50*1734; document.getElementById("tiendien2").innerHTML= thang100
+                let thang200= 100*2014; document.getElementById("tiendien3").innerHTML= thang200
+                let thang300= m3*2536; document.getElementById("tiendien4").innerHTML= thang300
+                let tong= thang50+thang100+thang200+thang300; document.getElementById("tongtien").innerHTML= tong
+            }else {
+                if(m2>0){let thang50= 50*1678; document.getElementById("tiendien1").innerHTML= thang50
+                    let thang100= 50*1734; document.getElementById("tiendien2").innerHTML= thang100
+                    let thang200= m2*2014; document.getElementById("tiendien3").innerHTML= thang200
+                    let tong= thang50+thang100+thang200; document.getElementById("tongtien").innerHTML= tong
+                } else {
+                    if(m1>0) {let thang50= 50*1678; document.getElementById("tiendien1").innerHTML= thang50
+                        let thang100= m1*1734; document.getElementById("tiendien2").innerHTML= thang100
+                        let tong= thang50+thang100; document.getElementById("tongtien").innerHTML= tong
+                    } else {let thang50= a*1678; document.getElementById("tiendien1").innerHTML= thang50
+                        let tong= thang50; document.getElementById("tongtien").innerHTML= tong
+                    }
+                }
+            }
+        }
+    }
+</script>
+<!–-Bai 11:-–>
+<table>
+    <tr>
+        <td>Tổng tiền lương chịu thuế:</td>
+        <td> <p id="tongtienluong"> 0: </p></td>
+        <td>Triệu đồng</td>
+    </tr>
+    <tr>
+        <td>Tổng khoản giảm trừ:</td>
+        <td> <p id="giamtru"> 0: </p></td>
+        <td>Triệu đồng</td>
+    </tr>
+    <tr>
+        <td>Thu nhập chịu thuế:</td>
+        <td> <p id="thunhapCT"> 0: </p></td>
+        <td>Triệu đồng</td>
+    </tr>
+    <tr>
+        <td><b>Thuế TNCN:</b></td>
+        <td> <b><p id="tongthue"> 0: </p></b></td>
+        <td><b>Triệu đồng</b></td>
+    </tr>
+    <tr>
+        <td>Thu nhập chịu thuế đến 5 triệu đồng:</td>
+        <td><p id="tienthue5"> 0: </p></td>
+        <td>Triệu đồng</td>
+    </tr>
+    <tr>
+        <td>Thu nhập chịu thuế đến 10 triệu đồng:</td>
+        <td><p id="tienthue10"> 0: </p></td>
+        <td>Triệu đồng</td>
+    </tr>
+    <tr>
+        <td>Thu nhập chịu thuế đến 18 triệu đồng:</td>
+        <td><p id="tienthue18"> 0: </p></td>
+        <td>Triệu đồng</td>
+    </tr>
+    <tr>
+        <td>Thu nhập chịu thuế đến 32 triệu đồng:</td>
+        <td><p id="tienthue32"> 0: </p></td>
+        <td>Triệu đồng</td>
+    </tr>
+    <tr>
+        <td>Thu nhập chịu thuế đến 52 triệu đồng:</td>
+        <td><p id="tienthue52"> 0: </p></td>
+        <td>Triệu đồng</td>
+    </tr>
+    <tr>
+        <td>Thu nhập chịu thuế đến 80 triệu đồng:</td>
+        <td><p id="tienthue80"> 0: </p></td>
+        <td>Triệu đồng</td>
+    </tr>
+    <tr>
+        <td>Thu nhập chịu thuế đến trên 80 triệu đồng:</td>
+        <td><p id="tienthuetren80"> 0: </p></td>
+        <td>Triệu đồng</td>
+    </tr>
+</table>
+<script>
+    let a= Number(prompt("Nhap vao luong hang thang:"));
+    let b= Number(prompt("Nhap vao so nguoi phu thuoc:"));
+    let giam=b*3.6;
+    let tnct=a-giam-9;
+    let m1= tnct-5;
+    let m2=tnct-10;
+    let m3=tnct-18;
+    let m4=tnct-32;
+    let m5=tnct-52;
+    let m6=tnct-80;
+    document.getElementById("tongtienluong").innerHTML=a;
+    document.getElementById("giamtru").innerHTML=giam;
+    document.getElementById("thunhapCT").innerHTML=tnct;
+    if(m6>0) {
+        let thangtren80= 18.15+m6*0.35; document.getElementById("tienthuetren80").innerHTML= thangtren80
+        let tong= thangtren80; document.getElementById("tongthue").innerHTML= tong
+    } else {
+        if (m5>0) {
+            let thang80= 9.75+m5*0.3; document.getElementById("tienthue80").innerHTML= thang80
+            let tong= thang80; document.getElementById("tongthue").innerHTML= tong
+        } else {
+            if(m4>0) {
+                let thang52= 4.75+m4*0.25; document.getElementById("tienthue52").innerHTML= thang52
+                let tong= thang52; document.getElementById("tongthue").innerHTML= tong
+            }else {
+                if(m3>0){
+                    let thang32= 1.95+m3*0.2; document.getElementById("tienthue32").innerHTML= thang32
+                    let tong= thang32; document.getElementById("tongthue").innerHTML= tong
+                } else {
+                    if(m2>0) {
+                        let thang18= 0.75+m2*0.15; document.getElementById("tienthue18").innerHTML= thang18
+                        let tong= thang18; document.getElementById("tongthue").innerHTML= tong
+                    } else {
+                        if(m1>0){
+                            let thang10= 0.25+m1*0.1; document.getElementById("tienthue10").innerHTML= thang10
+                            let tong= thang10; document.getElementById("tongthue").innerHTML= tong
+                        } else{
+                            let thang5= tnct*0.05; document.getElementById("tienthue5").innerHTML= thang5
+                            let tong= thang5; document.getElementById("tongthue").innerHTML= tong
+                        }
+                    }
+                }
+            }
+        }
+    }
+</script>
+<!–-Bai 12:-–>
+<table>
+    <tr>
+        <td>Số tiền gửi:</td>
+        <td> <p id="tongtien"> 0: </p></td>
+        <td>VNĐ</td>
+    </tr>
+    <tr>
+        <td>lãi suất % kỳ hạn gửi:</td>
+        <td> <p id="laisuat"> 0: </p></td>
+        <td>%/tháng</td>
+    </tr>
+    <tr>
+        <td>Kỳ hạn gửi:</td>
+        <td> <p id="thoigian"> 0: </p></td>
+        <td>tháng</td>
+    </tr>
+    <tr>
+        <td>số tiền cả gốc và lãi vào cuối kỳ</td>
+        <td><p id="nhanduoc"> 0: </p></td>
+        <td>VNĐ</td>
+    </tr>
+</table>
+<p id="tongtien"></p>
+<p id="laisuat"></p>
+<p id="thoigian"></p>
+<p id="nhanduoc"></p>
+<script>
+    let sotien = Number(prompt("Nhap so tien gưi ngan hang:"));
+    let lai = Number(prompt("Nhap lai suat % theo tháng:"));
+    let kyhan = Number(prompt("Nhap số tháng gửi:"));
+    let x=1+(lai/100);
+    let y=sotien* Math.pow(x,kyhan);
+    document.getElementById("tongtien").innerHTML=sotien;
+    document.getElementById("laisuat").innerHTML=lai;
+    document.getElementById("thoigian").innerHTML=kyhan;
+    //console.log(y);
+    let gocvalai = sotien* Math.pow(x,kyhan);
+    document.getElementById("nhanduoc").innerHTML=gocvalai;
+
+</script>
+</body>
+</html>
