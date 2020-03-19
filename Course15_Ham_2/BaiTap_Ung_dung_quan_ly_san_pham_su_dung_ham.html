@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        table {
+            border-collapse: collapse;
+        }
+        tr:nth-child(even) {
+            background-color: darkolivegreen;
+        }
+        button {
+            color: darkgreen;
+            background-color: #b3bdb1;
+            border: 2px;
+        }
+    </style>
+</head>
+<body>
+<h3>Add New Product</h3>
+<input type="text" id="addNewProduct" >
+<button onclick="addListProduct()" oninput="displayProduct()" ><b>Add</b></button>
+<h3><button onclick="displayProduct()" style="background-color: #b3bdb1 " ><b>Display All Product</b></button></h3>
+<table id="table">
+    <th colspan="3" align="left">Product Name</th><th align="right" ><p id = "total"><p></th>
+</table>
+<script>
+    let productName = [ "Sony Xperia", "Samsung Galaxy"];
+    displayProduct();
+    function displayProduct() {
+        let tableDraw = '<th colspan="2" align="left">ProductName</th> <th colspan="2" align="right" ><p id = "total"><p></th>';
+        for (let i = 0; i < productName.length; i++) {
+            tableDraw += '<tr></tr><td width="30px" align="center" ><p>' + (Number(i) + 1) + '</p></td ><td width="250px" align="left">' + productName[i] + '</td ><td width="70px" align="center" ><input style="width: 60px; height: 30px" type="button" value="Edit"  onclick="changeNameProduct(' + i
+                + ')"></td><td width="70px" align="center" ><input style="width: 60px; height: 30px" type="button" value="Delete"  onclick="deleteProduct(' + i
+                + ')"></td></tr>'
+        }
+        document.getElementById("table").innerHTML = tableDraw;
+        document.getElementById("total").innerHTML = productName.length + " products";
+    }
+    function addListProduct() {
+        let addName = document.getElementById("addNewProduct").value;
+        productName.push(addName);
+        console.log(productName);
+        displayProduct();
+    }
+    function saveNewName(location) {
+        productName[location] = document.getElementById("changeName").value;
+        displayProduct();
+    }
+    function changeNameProduct(location) {
+        let tableDraw = '<th colspan="2" align="left">ProductName</th> <th colspan="2" align="right" ><p id = "total"><p></th>';
+        for (let i = 0; i < productName.length; i++) {
+            if(location!==i) {
+                tableDraw += '<tr></tr><td width="30px" align="center" ><p>' + (Number(i) + 1) + '</p></td ><td width="250px" align="left">' + productName[i] + '</td ><td width="70px" align="center" ><input style="width: 60px; height: 30px" type="button" value="Edit"  onclick="changeNameProduct(' + i
+                    + ')"></td><td width="70px" align="center" ><input style="width: 60px; height: 30px" type="button" value="Delete"  onclick="deleteProduct(' + i
+                    + ')"></td></tr>'
+            } else {
+                console.log(location);
+                tableDraw += '<tr></tr><td width="30px" align="center"  ><p>' + (Number(i) + 1) + '</p></td ><td width="250px" align="left" ><input id = "changeName" value = ' + productName[i] + '><button onclick="saveNewName('+i+')">Save</button> </td ><td width="70px" align="center" ><input style="width: 60px; height: 30px" type="button" value="Edit"  onclick="changeNameProduct(' + i
+                    + ')"></td><td width="70px" align="center" ><input style="width: 60px; height: 30px" type="button" value="Delete" onclick="deleteProduct(' + i
+                    + ')"></td></tr>'
+            }
+        }
+        document.getElementById("table").innerHTML = tableDraw;
+
+    }
+    function deleteProduct(dl) {
+        productName[dl] = null;
+        productName.splice(dl,1);
+        displayProduct();
+    }
+
+
+</script>
+</body>
+</html>
