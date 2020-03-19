@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let k=10;
+    let mang1 = new Array();
+    let mang2 = new Array();
+    let mang3 = new Array(1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1);
+    for (i=0; i<k; i++) {
+        mang1 [i]=parseInt(Number(prompt("Nhap so hang cua mang 1:")));
+    }    for (i=0; i<k; i++) {
+        mang2 [i]=parseInt(Number(prompt("Nhap so hang cua mang 2:")));
+    }
+
+    for (i=0;i<mang3.length; i++){
+        mang1.push(mang2[i]);
+        mang3[i]=mang1[i];
+    }
+
+    document.write(mang3 +"<br/>");
+</script>
+</body>
+</html>

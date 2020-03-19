@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let k=10;
+    let mang = new Array();
+    for (i=0; i<k; i++) {
+        mang [i]=parseInt(Number(prompt("Nhap so hang cua mang:")));
+    }
+    document.write(mang +"<br/>");
+    let v = parseInt(Number(prompt("Nhap so hang cua mang:")));
+    let count=0;
+    for (i=0; i<mang.length && count<1; i++) {
+        if(mang[i]==v){
+            thongbao="V is in the array";
+            count++;
+        } else {
+        thongbao="V is not in the array";
+        }
+    }
+    document.write(thongbao);
+</script>
+</body>
+</html>

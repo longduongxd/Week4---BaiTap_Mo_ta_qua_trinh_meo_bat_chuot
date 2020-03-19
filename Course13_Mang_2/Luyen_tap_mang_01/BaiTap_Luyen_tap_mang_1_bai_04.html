@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let k=10;
+    let mang = new Array();
+    for (i=0; i<k; i++) {
+        mang [i]=parseInt(Number(prompt("Nhap so hang cua mang:")));
+    }
+    document.write(mang +"<br/>");
+    let count = 0;
+    let c = new Array();
+    while ( count<=mang.length){
+        c[count]= mang[mang.length-1-count];
+        count++
+    }
+    document.write("Mang dao nguoc la "+c +"<br/>");
+</script>
+</body>
+</html>

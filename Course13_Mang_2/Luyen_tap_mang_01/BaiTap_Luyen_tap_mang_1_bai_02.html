@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let k=10;
+    let mang = new Array();
+    for (i=0; i<k; i++) {
+        mang [i]=Number(prompt("Nhap so hang cua mang:"));
+        for( j =0; j<i; j++) {
+            if (mang[i]== mang [j]) {
+                alert("xin moi nhap so khac:");
+                i--;
+            }
+        }
+    }
+    document.write(mang +"<br/>");
+    let max=0;
+    for (i=0; i<mang.length; i++){
+        if( mang[i] > max) { max=mang[i]}
+    } document.write( "A number biggest of the array is " + max+"<br/>") ;
+    for (i=0; i<mang.length; i++){
+        if( mang[i]===max) {
+            document.write( mang[i]+" is "+i+"th element array" +"<br/>") ;
+        }
+    }
+</script>
+</body>
+</html>
