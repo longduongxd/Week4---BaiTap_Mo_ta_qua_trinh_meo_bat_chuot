@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let chuoi = prompt("Nhap vao tu can tra nghia");
+    let vietnames = ["xin chao", "hoc tap", "cham chi", "sang tao"];
+    let english = ["hello" ,"learn", "laborious", "creative"];
+    count=0;
+    for (i=0; i< vietnames.length, i< english.length, count<1; i++){
+        if (chuoi === vietnames[i]) { count++;
+            ketqua = english[i]
+        } else {
+            if(chuoi === english[i]) { count++
+                ketqua= vietnames[i]
+            } else {
+                if ( chuoi !== vietnames[i]&& chuoi!== english[i]) {
+                    ketqua="Not available"
+                }
+            }
+        }
+    } document.write(ketqua);
+
+</script>
+</body>
+</html>
