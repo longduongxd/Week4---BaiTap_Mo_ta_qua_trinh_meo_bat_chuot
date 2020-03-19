@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let mang2chieu = new Array(2);
+    for (i=0; i<2; i++){
+        mang2chieu[i] = new Array(2);
+    }
+    for (i=0; i<2; i++){
+        for (j=0; j<2; j++){
+            mang2chieu[i][j]= prompt("Nhap vao phan tu:") ;
+        }
+        document.write(mang2chieu[i]+"<br/>");
+    }
+    // document.write(mang2chieu);
+    // let mang2chieu = [['u',4,'g','c'],['d',8,'n','g'],[2,5,7,'j'],['r','b','c',5]];
+    let count=0;
+    for (i in mang2chieu) {
+        for (j in mang2chieu[i]){
+            if (mang2chieu[i][j]%1==0){
+                count++
+            }
+        }
+    }
+    document.write(mang2chieu +"<br/>");
+    document.write( "Co tat ca "+count+ " phan tu so trong mang");
+</script>
+</body>
+</html>

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let mang1 = new Array(1,5,9,3);
+    let mang2 = new Array(3,7,8,4);
+    let mang3 = new Array(6,2,6,3);
+    let mang4 = new Array(9,4,5,0);
+    let mang5 = new Array(2,3,2,8);
+    let mang2chieu = new Array(mang1,mang2,mang3,mang4,mang5);
+    for (i in mang2chieu) {
+        document.write("row "+i+"<br/>");
+        for (j in mang2chieu[i]) {
+            document.write(mang2chieu[i][j] +"<br/>");
+        }
+    }
+</script>
+</body>
+</html>

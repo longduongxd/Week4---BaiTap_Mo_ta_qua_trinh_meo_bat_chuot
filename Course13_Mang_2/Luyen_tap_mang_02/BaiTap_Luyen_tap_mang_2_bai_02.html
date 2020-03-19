@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let mang = new Array('m', 's', 'n', '2', '6', '1');
+    let k=10;
+    let mangreverse = new Array();
+    let count = 0;
+    while ( count<mang.length){
+        mangreverse[count]= mang[mang.length-1-count];
+        count++
+    }
+    document.write("Mang dao nguoc la "+mangreverse.join("") +"<br/>");
+</script>
+</body>
+</html>
