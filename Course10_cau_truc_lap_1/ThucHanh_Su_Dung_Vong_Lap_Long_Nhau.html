@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        table {
+            border-collapse: collapse;
+        }
+    </style>
+</head>
+<body>
+<script>
+    let a = "<table border='1' style='width: 300px; cellspacing: 0px; cellpadding: 3px;'>";
+    for (i=1; i<=10; i++){ a+= "<tr align='center'>";
+        for (j=1; j<=10; j++) {a+= "<td>"+i*j+"</td>";
+       }  a = a+ "</tr>";
+        }a = a+ "</table>";
+    document.write(a);
+
+</script>
+</body>
+</html>
