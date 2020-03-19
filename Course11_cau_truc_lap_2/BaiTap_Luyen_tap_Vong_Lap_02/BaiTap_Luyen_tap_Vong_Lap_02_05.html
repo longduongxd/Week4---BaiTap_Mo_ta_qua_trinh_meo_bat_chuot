@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let a=1;
+    let tienlai=0;
+    let thoihan =Number(prompt("Nhap thoi han cho vay theo thang:"));
+    let tiengoc =Number(prompt("Nhap so tien gui:"));
+    let lai =Number(prompt("Nhap lai suat tinh theo thang:"));
+    while (a<=thoihan)
+    {
+        tiengoc*=(1+lai/100);
+        a++;
+    }
+    document.write(tiengoc);
+</script>
+</body>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let i=1;
+    let j=1;
+    for (i=1; i<=5; i++) {
+        for(j=1; j<=i;j++){
+            document.write("*");
+        }document.write("<br/>");
+    }
+    document.write("<br/>");
+
+    for (i=5; i>=1; i--) {
+        for(j=1; j<=i;j++){
+            document.write("*");
+        }document.write("<br/>");
+    }
+    document.write("<br/>");
+
+    let z=1;
+    for(i=5;i>0;i--){document.write("<br/>");
+        for(j=1; j<=6-i;j++) {document.write("&nbsp&nbsp")};
+        for(z=6-i; z<=5;z++) {document.write("*")};
+    }
+    document.write("<br/>");
+    for(i=1;i<=5;i++){document.write("<br/>");
+        for(j=1; j<=6-i;j++) {document.write("&nbsp&nbsp")};
+        for(z=6-i; z<=5;z++) {document.write("*")};
+    }
+
+</script>
+</body>
+</html>
