@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<canvas id = "rectangleDraw" width="1500" height="800" style="border: 1px; solid-color: chartreuse "> </canvas>
+<script>
+    RectanglePrime = function rectangleInfor(a,b) {
+        this.a = a;
+        this.b = b;
+        this.agcreat = a*b;
+        this.perimeter = 2*(a+b);
+        this.getLength = function (){
+            return this.a
+        };
+        this.getWidth = function (){
+            return this.b
+        }
+        this.getAgcreat = function (){
+            return this.agcreat
+        }
+        this.getPerimeter = function (){
+            return this.perimeter
+        }
+        this.setLength = function (a) {
+            return this.a = a;
+        }
+        this.setWidth = function (b) {
+            return this.b = b;
+        }
+    }
+    function randomeElementRGB() {
+        return  Math.floor(Math.random()*255);
+    }
+    function randomColor(r,g,b) {
+        r = randomeElementRGB();
+        g = randomeElementRGB();
+        b = randomeElementRGB();
+        return "rgb(" + r + "," + g + "," + b + ")";
+    }
+    let rectangle = new RectanglePrime(10,5);
+    let length = rectangle.getLength();
+    let Width = rectangle.getWidth();
+    let rectangAgcreat = rectangle.getAgcreat();
+    let rectangPerimeter = rectangle.getPerimeter();
+    document.write('length: ' + length +"<br/>");
+    document.write('Width: ' + Width +"<br/>");
+    document.write('Agcreat: ' + rectangAgcreat+"<br/>");
+    document.write('Perimeter '+ rectangPerimeter +"<br/>");
+    let rectangLengthChange = rectangle.setLength(20);
+    let rectangWidthChange = rectangle.setWidth(15);
+    document.write('length change: ' + rectangLengthChange+"<br/>");
+    document.write('Width: change '+ rectangWidthChange +"<br/>");
+    let a = document.getElementById("rectangleDraw").getContext("2d");
+    let color = randomColor();
+    a.fillStyle = color;
+    a.beginPath();
+    a.fillRect(0,0,2000,1500);
+    a.fill();
+
+</script>
+</body>
+</html>
