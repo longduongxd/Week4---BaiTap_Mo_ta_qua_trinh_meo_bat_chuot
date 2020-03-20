@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<canvas id = "tooMuchCircles" width="2700px" height="1500px" style="border: 1px; solid-color: chartreuse"> </canvas>
+<script>
+    let Circle = function cicle(x,y,radius){
+        this.x = x;
+        this.y = y;
+        this.radius = radius;
+    }
+    function randomeElementRGB() {
+        return  Math.floor(Math.random()*255);
+    }
+    function randomColor(r,g,b) {
+        r = randomeElementRGB();
+        g = randomeElementRGB();
+        b = randomeElementRGB();
+        return "rgb(" + r + "," + g + "," + b +")";
+
+    }
+    function drawCircle(){
+        let a = document.getElementById("tooMuchCircles").getContext("2d");
+        let x= Math.random()*window.innerWidth;
+        let y= Math.random()*window.innerHeight;
+        let radius = Math.floor(Math.random()*300);
+        let color = randomColor();
+        let DrawCircle1 = new Circle(x,y,radius);
+        a.beginPath();
+        a.arc(DrawCircle1.x,DrawCircle1.y,DrawCircle1.radius,0,2*Math.PI);
+        a.fillStyle=color;
+        a.fill();
+    }
+    function multiCircle() {
+        for (i=1;i<80;i++) {
+            drawCircle()
+        }
+
+    }
+    multiCircle();
+
+
+</script>
+</body>
+</html>
