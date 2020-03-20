@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let Temperature = function temperatureC (c) {
+        if (c>= -273) {
+            this.temp = c ;
+        } else {
+            this.temp = -273 ;
+        }
+        this.getTemperature = function () {
+            return this.temp;
+        }
+        this.tempChangeToF = function () {
+            tempF = this.temp*1.8+32;
+            return tempF
+        }
+        this.tempChangeToK = function () {
+            tempK = this.temp + 273
+            return tempK
+
+        }
+    }
+    let temperature = new Temperature(25);
+    let celsius = temperature.getTemperature();
+    let fahrenheit = temperature.tempChangeToF();
+    let kenvin = temperature.tempChangeToK();
+    document.write("Temperature in Celsius is : " + celsius +"<br/>"+"Temperature in Fahrenheit scale is : " + fahrenheit+ "<br/>"+ " Temperature in Kenven scale is : " + kenvin )
+
+</script>
+</body>
+</html>
