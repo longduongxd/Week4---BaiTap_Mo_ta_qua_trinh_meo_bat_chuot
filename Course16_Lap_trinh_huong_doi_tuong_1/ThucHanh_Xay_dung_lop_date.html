@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let dateSet = function (day, month, year) {
+        this.dataDay = day;
+        this.dataMonth = month;
+        this.dataYear = year;
+        this.getDay = function () {
+            return this.dataDay;
+        }
+        this.getMonth = function () {
+            return this.dataMonth;
+        }
+        this.getYear = function () {
+            return this.dataYear;
+        }
+        this.setDay = function (Day1) {
+            return this.dataDay= Day1;
+        }
+        this.setMonth = function (Month1) {
+            return   this.dataMonth= Month1;
+        }
+        this.setYear = function (Year1) {
+            return this.dataYear= Year1;
+        }
+        this.toString = function () {
+            return document.write(this.dataDay+"//"+this.dataMonth+"//"+this.dataYear +"<br/>")
+        }
+
+    };
+    let dayInformation = new dateSet(20,03,2020);
+    let dayInfor = dayInformation.getDay();
+    let monthInfor = dayInformation.getMonth();
+    let yearInfor = dayInformation.getYear();
+    alert( dayInfor +" "+ monthInfor +" "+ yearInfor);
+    dayInformation.toString();
+    let setDayInfor = dayInformation.setDay(22);
+    let setMonthInfor = dayInformation.setMonth(04);
+    let setYearInfor = dayInformation.setYear(2030);
+    alert( setDayInfor +" "+ setMonthInfor +" "+ setYearInfor);
+    dayInformation.toString();
+</script>
+</body>
+</html>
