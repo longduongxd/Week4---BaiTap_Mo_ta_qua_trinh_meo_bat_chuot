@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let BatteryPrime = function batteryDetail(energy) {
+        this.energy = energy;
+        this.getEnergy = function() {
+            return this.energy
+        }
+        this.setEnergy = function(volume) {
+            this.energy += volume;
+            return this.energy
+        }
+        this.riseEnergy = function(increase) {
+            this.energy+=incress
+            return this.energy;
+        }
+        this.fellEnergy = function (decrease) {
+            this.energy-= decrease
+            return this.energy
+        }
+    }
+    let FlashLampPrime = function  flashLampInfo(status,battery) {
+        this.status = status;
+        this.battery = battery;
+        this.getStatus = function () {
+            return this.status;
+        }
+        this.getBattery = function () {
+            return this.Battery
+        }
+        this.batteryInfor = function () {
+            return document.write("battery perfomation: " + this.battery.getEnergy() + "<br/>")
+        }
+        this.turnOn = function turnOn() {
+            this.status = 'on'
+            return document.write(this.status + "<br/>")
+        }
+        this.turnOff = function () {
+            this.status = 'off'
+            return document.write(this.status + "<br/>")
+        }
+        this.light = function() {
+            if (this.status == 'on') {
+                alert("Lightning!" )
+            } else {
+                alert("Not Lightning!")
+            }
+            return
+        }
+    }
+    let battery = new BatteryPrime(50);
+    let flashLamp = new FlashLampPrime('off',battery)
+    battery.setEnergy(15)
+    flashLamp.batteryInfor()
+    flashLamp.turnOn ()
+    flashLamp.light();
+    flashLamp.turnOff()
+    flashLamp.light();
+    </script>
+    </body>
+</html>
