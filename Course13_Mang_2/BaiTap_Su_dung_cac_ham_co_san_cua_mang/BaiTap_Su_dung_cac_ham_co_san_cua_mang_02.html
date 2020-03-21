@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let dayso= prompt("Nhap day so can chuyen:");
+    let mang = dayso.toString();
+    let mang = new Array();
+    // console.log(mang);
+    for (i=0; i<mang.length; i++) {
+        if(mang[i]%2==0&& mang[i+1]%2==0) { mang[i]=mang[i]+"-";
+        } else { mang [i]=mang[i]};
+    }document.write(mang.join(""));
+    ;
+</script>
+</body>
+</html>

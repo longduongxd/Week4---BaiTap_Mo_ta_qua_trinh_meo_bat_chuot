@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let chuoi = prompt("Nhap vao day ky tu");
+    let uPPER = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
+    var lower = 'abcdefghijklmnopqrstuvwxyz';
+    let ketqua = new Array();
+    for (i=0; i<chuoi.length; i++) {
+        if (uPPER.indexOf(chuoi[i])!== -1) {
+            ketqua[i]= chuoi[i].toLowerCase();
+        } else { if(lower.indexOf(chuoi[i])!== -1) {
+            ketqua[i]= chuoi[i].toUpperCase();
+        } else {if(lower.indexOf(chuoi[i])== -1) { ketqua[i]=" "}}
+
+        }
+
+    }        document.write(ketqua.join(""));
+</script>
+</body>
+</html>
