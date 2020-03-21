@@ -6,13 +6,12 @@
 </head>
 <body>
 <script>
-    admin = []
-    let Mobile = function smartMobi(name,status,battery) {
+    let Mobile = function smartMobi(name,status,send,write,inbox,battery) {
         this.name = name
         this.status = status;
-        let send = [];
-        let write = [];
-        let inbox = [];
+        this.send = send;
+        this.write = write;
+        this.inbox = inbox;
         this.battery = battery;
         this.checkBattery = function () {
             return this.battery
@@ -40,43 +39,47 @@
             this.effectBattery()
             if (this.status == ['on']) {
                 let writeMess ="Đi đu đưa đi!" //prompt("Write some things!")
-                write.push(writeMess);
+                this.write = writeMess;
+                name.inbox = this.write
                 this.battery-= 1;
-                return write
+                return this.write
             } else {return }
         }
-        this.sendMess = function () {
+        this.saveSend = function () {
+            this.send = this.write
+            return this.send
+        }
+        this.sendMess = function (address) {
             this.effectBattery()
             if (this.status == 'on') {
-                send.push(write[write.length - 1])
-                admin.push(write[write.length - 1])
+                address.inbox = this.write
+                this.saveSend();
                 this.battery-= 1;
-                return send
+                return address.inbox
             } else {return}
         }
         this.inboxMess = function () {
             this.effectBattery()
             if (this.status == 'on') {
-                inbox.push(admin[admin.length - 1])
                 this.battery-= 1;
-                return inbox
+                return this.inbox
             } else {return}
         }
     }
 
-    let nokia = new Mobile('nokiaMobi','off',15)
-    let iPhone = new Mobile('iPhoneMobi','on',0)
+    let nokia = new Mobile('nokiaMobi','off',0,0,0,15)
+    let iPhone = new Mobile('iPhoneMobi','on',0,0,0,0)
     document.write("Battery of Nokia before send a message: "+ nokia.checkBattery()+"<br/>")
     document.write("Nokia satus: " + nokia.checkStatus()+ "<br/>")
     nokia.changeStatus('on')
     document.write("After change Nokia status: " + nokia.checkStatus() + "<br/>")
     document.write('Nokia write box message: ' +nokia.writeMessage() + "<br/>")
-    document.write('Nokia send box message: '+nokia.sendMess() + "<br/>")
+    document.write('Nokia send box message: '+nokia.sendMess(iPhone) + "<br/>")
     document.write("Battery of Nokia after send a message: "+ nokia.checkBattery()+"<br/>")
     document.write("Battery of iPhone: "+ iPhone.checkBattery()+"<br/>")
     document.write("Battery of iPhone after charged: "+ iPhone.charging(30)+"<br/>")
-    document.write("iPhone's inbox: " +iPhone.inboxMess() + "<br/>")
-    Bai tap xay dung lop mo ta dien thoai
+    document.write("iPhone's inbox: " + iPhone.inboxMess() + "<br/>")
+
 </script>
 </body>
 </html>
