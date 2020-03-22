@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let ElectricLamp = function lamp(status) {
+        this.status = status
+        this.getStatus = function () {
+            return console.log(this.status)
+        }
+    }
+    let SwitchButton = function switchControl(status,electricLamp) {
+        this.status = status
+        this.eletricLamp = electricLamp
+        this.getStatus = function () {
+            return console.log(this.status)
+        }
+        this.connectToLamp = function (x) {
+            if (x == "disConnect") {
+                this.status = this.status
+                this.electricLamp.status = electricLamp.status
+            } else {
+                this.eletricLamp.status = this.status
+            }
+        }
+        this.switch = function (x) {
+            this.status = x
+            this.eletricLamp.status == x
+        }
+        this.changeStatus = function (x) {
+            for (i = 1; i <= x; i++) {
+                if (i >= 5) {
+                    alert("please slow down!")
+                }
+                this.switch()
+            }
+        }
+    }
+        let electricLamp = new ElectricLamp('on')
+        let switchButton = new SwitchButton('on',electricLamp);
+        switchButton.getStatus()
+        electricLamp.getStatus()
+        switchButton.connectToLamp('disConect')
+        switchButton.changeStatus(5)
+        switchButton.switch('off')
+        switchButton.getStatus()
+        electricLamp.getStatus()
+        switchButton.connectToLamp('conect')
+        switchButton.getStatus()
+        electricLamp.getStatus()
+
+
+</script>
+</body>
+</html>
