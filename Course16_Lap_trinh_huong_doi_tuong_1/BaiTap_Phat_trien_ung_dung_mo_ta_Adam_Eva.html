@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let Apple = function anApple() {
+        this.weight = 10;
+        this.getWeight = function () {
+            return console.log(this.weight)
+            }
+        this.decrease = function (a) {
+            this.weight-= a
+            return console.log(this.weight)
+        }
+        this.riseWeight = function (a) {
+            this.weight += a
+            return console.log(this.weight)
+        }
+        this.countApple = function () {
+            if(this.weight ==0){
+                console.log("is empty")
+            } else { console.log(this.weight)}
+        }
+    }
+    let Human = function aHunman(name,gender,weight,apple) {
+        this.name = name;
+        this.gender = gender;
+        this.weight = weight;
+        this.apple = apple;
+        this.talk = function (text) {
+            return console.log("hi, I'm "+ this.name+ " i'm " + this.weight+ " kg" +text
+            )
+        }
+        this.checkGender = function(){
+            if(this.gender == male){
+                return console.log("male")
+            } else { return console.log("female")}
+        }
+        this.setGender = function (gender) {
+            this.gender = gender
+            return console.log(this.gender)
+        }
+        this.getName = function () {
+            return console.log(this.name)
+        }
+        this.setName = function (name) {
+            this.name =name
+            return console.log(this.name)
+        }
+        this.getWeight = function () {
+            return this.weight
+            console.log(this.weight)
+        }
+        this.setWeight = function (weight) {
+            this.weight = weight
+            return console.log(this.weight)
+        }
+        this.checkApple = function () {
+            return this.apple.getWeight()
+        }
+        this.eat = function () {
+            this.apple.weight--;
+            this.weight++;
+            this.apple.getWeight()
+            console.log(this.weight)
+        }
+        this.eater = function (x) {
+            for (i=1; i<=x; i++){
+                this.eat()
+            }
+        }
+    }
+    let apple = new Apple()
+    let human1 = new Human('Minh', 'male', '70',apple)
+    let human2 = new Human('Linh', 'female', '50',apple)
+    human1.talk(" and me is a truly gentleman")
+    human2.talk(" i'm a beauty girl, sexyyyy")
+    human1.checkApple()
+    human1.eater(5)
+    human2.eater(5)
+    human2.apple.countApple()
+
+
+</script>
+</body>
+</html>
