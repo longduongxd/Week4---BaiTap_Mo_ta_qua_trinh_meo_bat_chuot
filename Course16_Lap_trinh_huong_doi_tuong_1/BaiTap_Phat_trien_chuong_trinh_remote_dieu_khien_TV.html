@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let Televison = function smartTV(channel,volume,status) {
+        this.channel = channel
+        this.volume = volume
+        this.status = status
+        this.channel1 = "You are watch " + this.channel+ " channel"
+        this.volume1 = "Volume is " +this.volume
+        this.status1 = "Hello ,now I " +this.status
+        this.getChannel = function () {
+            return console.log("You are watch " + this.channel+ " channel")
+        }
+        this.getVolume = function () {
+            return console.log("Volume is " +this.volume)
+        }
+        this.getStatus = function () {
+            if(this.status ==="off"){
+                return console.log("Hello ,now I "+ this.status+ " , please turn on to watching")
+            } else {
+                if(this.status ==="on"){
+                    return console.log("Hello ,now I " +this.status+ " , please turn off if you do not use")
+                }
+            }
+        }
+        this.setChannel = function (channel) {
+            this.channel = channel
+            return this.channel
+        }
+        this.setVolume = function (x) {
+            this.volume+=x
+            return this.volume
+        }
+        this.setStatus = function (s) {
+            this.status = s
+            return this.status
+        }
+    }
+    let Remote = function (id,televison) {
+        this.id = id
+        this.televison = televison
+        this.getID = function () {
+            return this.id
+        }
+        this.remoteChannel = function (channel) {
+            this.televison.channel = channel
+            return this.televison.channel
+        }
+        this.remoteVolume = function (x) {
+            this.televison.volume = x
+            return this.televison.volume
+        }
+        this.remoteStatus = function (x) {
+            this.televison.status = x
+            return this.televison.status
+        }
+    }
+    let televison = new Televison('VTV1',30,'off')
+    let remote = new Remote(123456,televison)
+    let remote1 = new Remote(623426,televison)
+    televison.setStatus('on')
+    televison.getStatus()
+    televison.setChannel('VTV7')
+    televison.getChannel()
+    remote.televison.setChannel("VTV3")
+    remote1.televison.setVolume(2)
+    televison.getChannel()
+    televison.getVolume()
+    remote1.televison.setStatus('off')
+    televison.getStatus()
+
+
+</script>
+</body>
+</html>
