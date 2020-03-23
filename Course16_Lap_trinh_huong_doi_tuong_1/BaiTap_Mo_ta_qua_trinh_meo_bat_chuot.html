@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let Mouse = function (name,weig,speed,status) {
+        this.name = name
+        this.weig = weig
+        this.speed = speed
+        this.status = status
+        this.sound = "chit chit"
+    }
+    let Cat = function (name,weight,maxSpeed,mouse) {
+        this.name = name;
+        this.weight = weight;
+        this.maxspeed = maxSpeed;
+        this.mouse = mouse
+        this.sound = "meo meo"
+        this.getWeight = function () {
+            return console.log(this.weight)
+        }
+        this.catch = function (mouse) {
+            if(this.maxspeed>this.mouse.speed){
+                console.log(this.sound)
+                console.log(this.mouse.sound)
+                console.log(this.name + "catched "+ this.mouse.name + " mouse")
+            } else {
+                console.log(this.name + "can not catch "+ this.mouse.name + " because its too fast")
+            }
+        }
+        this.eat = function (mouse) {
+            if( this.mouse.status ==="on"){
+                this.weight+=this.mouse.weig
+                console.log(this.sound)
+            } else {
+                console.log("oh no, its cannot eat, not healthy")
+            }
+        }
+        }
+        let mouse1 = new Mouse('K-ICM', 2,4,'on')
+        let cat = new Cat('Tom',8,5,mouse1)
+        cat.catch(mouse1)
+        cat.getWeight()
+        cat.eat(mouse1)
+        cat.getWeight()
+
+
+
+</script>
+</body>
+</html>
