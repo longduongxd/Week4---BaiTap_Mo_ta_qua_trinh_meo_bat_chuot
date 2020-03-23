@@ -11,24 +11,37 @@
         this.getStatus = function () {
             return console.log(this.status)
         }
+        this.setStatus = function (x) {
+            this.status = x
+            return console.log(this.status)
+        }
     }
-    let SwitchButton = function switchControl(status,electricLamp) {
+    let SwitchButton = function switchControl(status,electricLamp,connect) {
         this.status = status
-        this.eletricLamp = electricLamp
+        this.electricLamp = electricLamp
+        this.connect = connect
         this.getStatus = function () {
             return console.log(this.status)
         }
         this.connectToLamp = function (x) {
-            if (x == "disConnect") {
+            this.connect = x
+            if (this.connect === 'disConnect') {
                 this.status = this.status
-                this.electricLamp.status = electricLamp.status
+                this.electricLamp.setStatus = electricLamp.status
             } else {
-                this.eletricLamp.status = this.status
+                this.status = this.status
+                this.electricLamp.status = this.status
             }
+
         }
         this.switch = function (x) {
-            this.status = x
-            this.eletricLamp.status == x
+            if (this.connect === 'disConnect') {
+                this.status = x
+                this.electricLamp.setStatus = electricLamp.status
+            } else {
+                this.status = x
+                this.electricLamp.status = this.status
+            }
         }
         this.changeStatus = function (x) {
             for (i = 1; i <= x; i++) {
@@ -43,7 +56,7 @@
         let switchButton = new SwitchButton('on',electricLamp);
         switchButton.getStatus()
         electricLamp.getStatus()
-        switchButton.connectToLamp('disConect')
+        switchButton.connectToLamp('disConnect')
         switchButton.changeStatus(5)
         switchButton.switch('off')
         switchButton.getStatus()
@@ -51,6 +64,7 @@
         switchButton.connectToLamp('conect')
         switchButton.getStatus()
         electricLamp.getStatus()
+
 
 
 </script>
